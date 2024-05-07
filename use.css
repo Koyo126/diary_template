@@ -1,0 +1,488 @@
+/* CSS ファイル */
+/*
+デザインはいくつかのサイトを参考に作成しました．ありがとうございます．
+凝ったデザインは基本的には以下のサイトのものを使用しています．
+https://excellent.ne.jp/homepage/6562/
+https://saruwakakun.com/html-css/reference/box#google_vignette
+https://jajaaan.co.jp/css/css-headline/
+https://ics.media/entry/230629/
+https://web-camp.io/magazine/archives/97812
+https://kouhekikyozou.com/css_content_image
+https://turicco.com/box/#toc47
+https://pote-chil.com/css-stock/ja/toc
+*/
+/* 
+# は id 名をセレクタにするとき
+. は class 名をセレクタにするとき
+*/
+
+<@charset "UTF-8";>
+
+/* 
+文中で単語の区切りで改行がされるが、単語の改行ポイントがない場合は
+   長い単語などでは途中で改行される。 
+*/
+.word-break-break-word {
+    word-break: break-word;
+}
+
+body {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    text-size-adjust: 100%;
+}
+
+/* ヘッダーに適用するスタイル */
+#headline {
+    text-align: center;
+}
+
+/* 小見出し */
+.subtitle {
+		font-size : 36px;
+    line-height : 1.3333;
+    padding: 0.5em; /* 文字周りの余白 */
+    color: #010101; /* 文字色 */
+    background: #eaf3ff; /* 背景色 */
+    border-bottom: solid 3px #516ab6; /* 下線 */
+}
+
+/* 
+box26 
+*/
+.box26 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #95ffa3;
+    border-radius: 8px;
+}
+.box26 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #030f05;
+    font-weight: bold;
+}
+.box26 p {
+    margin: 0; 
+    padding: 0;
+}
+
+/* 黒枠で囲む */
+.solid {
+    border: solid 2px black; padding: 20px; width: 70%; background-color: transparent;
+}
+
+/*
+link_button
+カーソルをあてると見た目が変わる（:hover）
+*/
+.link_button {
+  font-weight: bold;/*太字に*/
+  text-decoration: none;/*下線消す*/
+  background: lightgreen;/*背景をlightgreenに*/
+  color:white;/*文字を白に*/
+  padding:5px 10px;/*内側の余白*/
+  border-radius: 20px;/*角を丸くする*/
+  font-family: 'Avenir','Arial';
+}
+/*カーソルを当てたとき*/
+.link_button:hover {
+  background: silver;/*背景色をシルバーに*/
+  text-decoration: none;/*下線を消す*/
+}
+
+/*
+a.btn_29
+カーソルをあてると光るボタン．
+*/
+a.btn_29 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	position: relative;
+	border-radius: 5px;
+	border: 1px solid #27acd9;
+	font-weight: bold;
+	letter-spacing: 2px;
+	background: transparent;
+	color: #27acd9;
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+a.btn_29:hover {
+	color: #fff;
+	background: #27acd9;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+a.btn_29:hover::before {
+	-webkit-animation: sh02 0.5s 0s linear;
+	-moz-animation: sh02 0.5s 0s linear;
+	animation: light 0.5s 0s linear;
+}
+a.btn_29::before {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 86%;
+	position: absolute;
+	top: 7%;
+	left: 0%;
+	opacity: 0;
+	background: #fff;
+	box-shadow: 0 0 50px 30px #fff;
+	-webkit-transform: skewX(-20deg);
+	-moz-transform: skewX(-20deg);
+	-ms-transform: skewX(-20deg);
+	-o-transform: skewX(-20deg);
+	transform: skewX(-20deg);
+}
+@keyframes light {
+	from {opacity: 0; left: 0%;}
+	50% {opacity: 1;}
+	to {opacity: 0;left: 100%;}
+}
+
+/*ポップなドットで囲む*/
+.popbox {
+background:#ffe9d8; /*背景色の指定*/
+border:#ffa868 5px dotted; /*境界線の指定*/
+padding:10px;
+}
+.popbox p {
+margin: 2em auto;
+padding:2em;
+}
+
+/* 
+box54
+白ステッチをつける
+*/
+.box54{
+margin: 2em auto;
+padding:2em;/*内側余白*/
+position: relative;
+padding:1.5em !important;
+z-index: 0;
+background-color:#b0ebce;/*背景色*/
+}
+.box54:before{
+position: absolute;
+border: 2px dashed #fff;/*破線の太さ・色*/
+content: '';
+display: block;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+margin:5px;
+z-index: -1;
+border-radius:3px;
+}
+
+/*
+box_crossing
+交差するデザイン
+*/
+.box_crossing {
+position:relative;
+border-top:#da1717 solid 2px;  /*上の境界線の指定*/
+border-bottom:#da1717 solid 2px;  /*下の境界線の指定*/
+padding:10px 20px;
+}
+.box_crossing:before {
+content:"";
+position:absolute;
+top:-10px;  /*左の境界線を上にはみ出させる数値の指定*/
+left:10px; /*左の境界線を内側に寄せる数値の指定*/
+width:2px; /*左の境界線の太さの指定*/
+height:calc(100% + 20px); /*左の境界線の長さの指定*/
+background:#da1717; /*左の境界線の色の指定*/
+}
+.box_crossing:after {
+content:"";
+position:absolute;
+top:-10px;  /*右の境界線を上にはみ出させる数値の指定*/
+right:10px; /*右の境界線を内側に寄せる数値の指定*/
+width:2px; /*右の境界線の太さの指定*/
+height:calc(100% + 20px); /*右の境界線の長さの指定*/
+background:#da1717; /*右の境界線の色の指定*/
+}
+.box_crossing p {
+margin:0;
+padding:0;
+}
+
+/*蛍光ペンでアンダーラインを引く（赤）*/
+.under_red {
+  background: linear-gradient(transparent 70%, #fa738c 70%);
+}
+
+/*蛍光ペンでアンダーラインを引く（黄）*/
+.under_yellow {
+  background: linear-gradient(transparent 70%, #ecef28 70%);
+}
+
+/* 印象が重くならない囲い */
+.box7{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+}
+.box7 p {
+    margin: 0; 
+    padding: 0;
+}
+
+/* コードを示すときなど */
+.boxcode{
+  padding: 8px 19px;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #d5d8db;
+  border-top: solid 5px #59cfac;
+  border-bottom: solid 5px #59cfac;
+}
+.boxcode p {
+  margin: 0; 
+  padding: 0;
+}
+
+/*
+box_search
+アイコンをつけた囲み枠
+アイコンは css_content ディレクトリに入れ，それを以下で使用する
+*/
+.box_search {
+  padding: 1em 1.5em;
+  margin: 2em 0;
+  background-color:rgba(253, 225, 225, 0.883);/*背景色*/
+  border-left: solid 10px #41c574;/*左ライン*/
+}
+.box_search .box-title {
+	color: #000000 ; /* タイトル文字色 */
+	font-size: 18px;
+	font-weight: bold;
+}
+.box_search .box-title:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(css_content/lupe.png) no-repeat; /* ここに何らかの画像ファイルを置く */
+  background-size: contain;
+  margin-right: 8px;
+}
+
+/* 影でbox 領域を表示 */
+.box_shadow{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.box_shadow p {
+  margin: 0; 
+  padding: 0;
+}
+
+/* 空行を上下に作成する */
+.spacer {
+  margin-top: 30px; /* 上部の余白 */
+  margin-bottom: 30px; /* 下部の余白 */
+}
+
+/* 空行を下に作成 */
+.spacer_bottom {
+	margin-bottom: 30px;
+}	
+
+/* オレンジ色の下線 */
+.under_orange {
+      padding: 0.5rem 0rem;
+      margin-bottom: 0.2rem;
+      border-bottom: 3px solid #f6ba33;
+      font-weight: bold;
+      font-size: 20px;
+      display: inline-block;
+}
+
+/*下線グラデーション*/
+.line_gradation {
+  position: relative;
+  padding: 1rem .5rem;
+}
+.line_gradation:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: '';
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));
+  background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
+  background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+}
+
+/*
+カレンダー
+以下のサイトから引用．直接 Google Calendar を使用もできる．
+https://designup.jp/html-calendar.html
+*/
+.calendar-wrap {
+  margin: 0 auto;
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+@media (max-width: 767.98px) {
+  .calendar-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar th,
+.calendar td {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.calendar th {
+  padding: 6px 10px;
+}
+.calendar td {}
+@media (max-width: 767.98px) {
+  .calendar th,
+  .calendar td {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .calendar th {
+    padding: 3px 6px;
+  }
+}
+.calendar .sun {
+  color: #e17f7e;
+  background-color: #f8e4e2;
+}
+.calendar .sat {
+  color: #7ab6f3;
+  background-color: #e7f6fd;
+}
+.calendar .mute {
+  color: #aaa;
+}
+.calendar .today {
+  background-color: #4cf436;
+}
+.calendar .off {
+  background-color: #fadcdb;
+}
+
+/*
+目次（開閉式）
+*/
+.toc-005 {
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+}
+.toc-005 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #25d0ae;
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+}
+.toc-005 div::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22M3.8%2017.2h-3c-.5%200-.8.4-.8.8v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8v-3c-.1-.4-.4-.8-.8-.8zm0-15h-3c-.5%200-.8.4-.8.8v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8V3c-.1-.4-.4-.8-.8-.8zm0%207.6h-3c-.5%200-.8.3-.8.7v3c0%20.4.3.8.8.8h3c.4%200%20.8-.3.8-.8v-3c-.1-.4-.4-.7-.8-.7zM23.2%2018h-15c-.4%200-.8.3-.8.8v1.5c0%20.4.3.8.8.8h15c.4%200%20.8-.3.8-.8v-1.5c0-.5-.3-.8-.8-.8zm0-15h-15c-.4%200-.7.3-.7.8v1.5c0%20.4.3.7.7.7h15c.5%200%20.8-.3.8-.8V3.8c0-.5-.3-.8-.8-.8zm0%207.5h-15c-.4%200-.8.3-.8.8v1.5c0%20.4.3.8.8.8h15c.4%200%20.8-.3.8-.8v-1.5c0-.5-.3-.8-.8-.8z%22%2F%3E%3C%2Fsvg%3E');
+    content: '';
+}
+.toc-005 label::after {
+    margin-left: 7px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #fff;
+    content: "[開く]";
+    cursor: pointer;
+}
+.toc-005:has(:checked) label::after {
+    content: "[閉じる]";
+}
+.toc-005 input {
+    display: none;
+}
+.toc-005 ol {
+    list-style-type: disc;
+    margin: 0;
+    overflow: hidden;
+}
+.toc-005 > ol {
+    height: 0;
+}
+.toc-005:has(:checked) > ol {
+    height: auto;
+    padding: 1em 1em 1em 3em;
+}
+.toc-005 ol ol {
+    margin-top: 5px;
+    padding-left: 1.1em;
+}
+.toc-005 li {
+    padding: 5px 0;
+    font-weight: 600;
+}
+.toc-005 ol ol li {
+    font-weight: 500;
+}
+.toc-005 a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 囲い */
+.large-index {   
+    padding: 0.5em;/*文字周りの余白*/
+    color: #010101;/*文字色*/
+    background: #ffffff;/*背景色*/
+    border-bottom: solid 3px #51b6a0;/*下線*/
+    border-top: solid 3px #51b6a0;/*上線*/
+    border-left: solid 3px #51b6a0;
+    border-right: solid 3px #51b6a0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
