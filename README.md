@@ -6,3 +6,6 @@
 	・javascript ディレクトリは，JavaScript ファイル用のディレクトリ
 
 CSS, JavaScript を作成する際に参考にした Web サイトは各ファイルに記載しました．
+
+以下のリンクからプレビューがみられる。
+https://koyo126.github.io/diary_template/diary.html
