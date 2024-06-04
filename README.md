@@ -4,7 +4,7 @@
 	・./diary.html は，html ファイル
 	・./main.css は，CSS ファイル
 	・./javascript/ は，JavaScript ファイル用のディレクトリ
-  ・./samples/ は，サンプル置き場
+  	・./samples/ は，サンプル置き場
 
 CSS, JavaScript を作成する際に参考にした Web サイトは各ファイルに記載しました．
 
