@@ -1,3 +1,9 @@
+<@charset "UTF-8";>
+
+html {
+  font-size: 100%;
+}  
+
 /* https://ginneko-atelier.com/blogs/entry393/ を参考に作成 */
 .select {
   background: #cfe2f3; /* 水色 */
