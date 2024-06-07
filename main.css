@@ -18,6 +18,10 @@ https://pote-chil.com/css-stock/ja/toc
 
 <@charset "UTF-8";>
 
+html {
+  font-size: 100%;
+}
+
 /* 
 文中で単語の区切りで改行がされるが、単語の改行ポイントがない場合は
    長い単語などでは途中で改行される。 
